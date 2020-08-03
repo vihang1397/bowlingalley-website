@@ -74,6 +74,11 @@ section.contact {
   background: url("images/contact.jpg") no-repeat;
   background-size: 1356px 768px;
 }
+section.bar-food {
+  height: 100vh;
+  background: url("images/Bar&food.jpg") no-repeat;
+  background-size: 1356px 768px;
+}
 
 @media screen and (max-width: 768px) {
   .line {
@@ -109,12 +114,21 @@ section.contact {
   }
 
   .nav-links.open {
-    clip-path: circle(1100px at 90% -20%);
-    -webkit-clip-path: circle(1100px at 90% -20%);
+    clip-path: circle(1600px at 90% -20%);
+    -webkit-clip-path: circle(1600px at 90% -20%);
     pointer-events: all;
   }
 
   .nav-links li a {
     font-size: 25px;
   }
+
+  /* Working on making backgrounds better in responsive mode
+  section.bar-food {
+    height: auto;
+    width: auto;
+    background: url("images/Bar&food.jpg") no-repeat;
+    background-size: 1024px 768px;
+    background-position: 40%;
+  } */
 }
