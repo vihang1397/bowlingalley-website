@@ -6,7 +6,7 @@
 
 nav {
   height: 10vh;
-  background: #5b78c7;
+  background: #05002e;
 }
 
 .nav-links {
@@ -26,16 +26,28 @@ nav {
   font-family: sans-serif;
 }
 
-footer {
-  background: #5b78c7;
+header {
   position: fixed;
-  bottom: 0%;
+  top: 0;
+  width: 100%;
+}
+
+header nav ul img#logo {
+  float: left;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+footer {
+  background: #05002e;
+  /* position: fixed;
+  bottom: 0%; */
   width: 100%;
   text-align: center;
   height: 40px;
   padding: 10px;
   color: white;
-  z-index: -1;
 }
 
 .copyright {
@@ -47,8 +59,20 @@ footer {
   text-decoration: underline;
 }
 
-section {
-  height: 1000px;
+section.landing {
+  height: 100vh;
+  background: url("images/landing.jpg") no-repeat;
+  background-size: 1356px 768px;
+}
+section.about {
+  height: 100vh;
+  background: url("images/about.jpg") no-repeat;
+  background-size: 1356px 768px;
+}
+section.contact {
+  height: 100vh;
+  background: url("images/contact.jpg") no-repeat;
+  background-size: 1356px 768px;
 }
 
 @media screen and (max-width: 768px) {
@@ -74,7 +98,7 @@ section {
 
   .nav-links {
     position: fixed;
-    background: #5b78c7;
+    background: #05002e;
     height: 100vh;
     width: 100%;
     flex-direction: column;
