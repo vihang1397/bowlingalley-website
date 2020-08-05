@@ -1,12 +1,18 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%; /*<--*/
+  grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 nav {
-  height: 10vh;
+  height: 17vh;
   background: #05002e;
+  position: relative;
 }
 
 .nav-links {
@@ -41,11 +47,11 @@ header nav ul img#logo {
 
 footer {
   background: #05002e;
-  /* position: fixed;
-  bottom: 0%; */
+  position: fixed;
+  bottom: 0%; 
   width: 100%;
   text-align: center;
-  height: 40px;
+  height: 20px;
   padding: 10px;
   color: white;
 }
@@ -59,26 +65,78 @@ footer {
   text-decoration: underline;
 }
 
-section.landing {
+.landing {
+  display: grid;
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
   height: 100vh;
-  background: url("images/landing.jpg") no-repeat;
-  background-size: 1356px 768px;
+  background: url("images/pic3resize.jpg") no-repeat;
+  background-size: 100% 67%;
 }
-section.about {
+
+.dining{
+  float: left;
+  width: 15%;
+  height: 100%;
+  background: url("images/Bar&foodresize.jpg");
+  border-radius: 50%;
+}
+
+.bowling1{
+  float: left;
+  width: 15%;
+  height: 100%;
+  background: url("images/bowling1resize.jpg");
+  border-radius: 50%;
+
+}
+
+.bday{
+  float: right;
+  width: 15%;
+  height: 100%;
+  background: url("images/bdayresize.jpg");
+  border-radius: 50%;
+}
+
+.title h2{
+  float: right;
+}
+
+.title h1, .title h2{
+  display: inline;
+  color: #0073e6;
+  font-size: 50px;
+  text-shadow: 2px 2px #05002e;
+}
+
+/*.circles {
+  display: grid;
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+}*/
+
+/* will put this back in after-----
+section.bowling {
   height: 100vh;
-  background: url("images/about.jpg") no-repeat;
+  background: url("#") no-repeat;
   background-size: 1356px 768px;
 }
 section.contact {
   height: 100vh;
-  background: url("images/contact.jpg") no-repeat;
+  background: url("#") no-repeat;
   background-size: 1356px 768px;
 }
 section.bar-food {
   height: 100vh;
-  background: url("images/Bar&food.jpg") no-repeat;
+  background: url("#") no-repeat;
   background-size: 1356px 768px;
 }
+section.parties {
+  height: 100vh;
+  background: url("#") no-repeat;
+  background-size: 1356px 768px;
+}*/
 
 @media screen and (max-width: 768px) {
   .line {
@@ -86,10 +144,6 @@ section.bar-food {
     height: 3px;
     background: white;
     margin: 5px;
-  }
-
-  nav {
-    position: relative;
   }
 
   .hamburger {
