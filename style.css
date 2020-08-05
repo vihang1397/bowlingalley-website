@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body{
+body {
   display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%; /*<--*/
   grid-template-rows: 20% 20% 20% 20% 20%;
@@ -48,7 +48,7 @@ header nav ul img#logo {
 footer {
   background: #05002e;
   position: fixed;
-  bottom: 0%; 
+  bottom: 0%;
   width: 100%;
   text-align: center;
   height: 20px;
@@ -74,40 +74,66 @@ footer {
   background-size: 100% 67%;
 }
 
-.dining{
+div.circles {
   float: left;
+  display: inline-flex;
+}
+
+.bowling1 {
   width: 15%;
-  height: 100%;
+  background: url("images/bowling1resize.jpg");
+  background-position-y: center;
+  border-radius: 50%;
+  border: 5px white solid;
+  margin-left: 13%;
+  margin-top: 4%;
+}
+
+.dining {
+  width: 15%;
   background: url("images/Bar&foodresize.jpg");
   border-radius: 50%;
+  border: 5px white solid;
+  margin-left: 15%;
+  margin-top: 4%;
 }
 
-.bowling1{
-  float: left;
+.bday {
   width: 15%;
-  height: 100%;
-  background: url("images/bowling1resize.jpg");
-  border-radius: 50%;
-
-}
-
-.bday{
-  float: right;
-  width: 15%;
-  height: 100%;
   background: url("images/bdayresize.jpg");
   border-radius: 50%;
+  border: 5px white solid;
+  margin-left: 14%;
+  margin-top: 4%;
 }
 
-.title h2{
+.circles h2 {
+  color: white;
+  text-shadow: 2px 2px #05002e;
+  text-align: center;
+  justify-items: baseline;
+  /* margin-top: 100px; */
+  padding-top: 100px;
+}
+
+.title h2 {
   float: right;
 }
 
-.title h1, .title h2{
+.title h1,
+.title h2 {
   display: inline;
   color: #0073e6;
   font-size: 50px;
   text-shadow: 2px 2px #05002e;
+}
+
+.contact,
+.about,
+.faq {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 /*.circles {
