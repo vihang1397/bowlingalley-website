@@ -77,20 +77,21 @@ footer {
 div.circles {
   float: left;
   display: inline-flex;
+  margin-top: 200px;
 }
 
 .bowling1 {
-  width: 15%;
+  width: 13%;
   background: url("images/bowling1resize.jpg");
   background-position-y: center;
   border-radius: 50%;
   border: 5px white solid;
-  margin-left: 13%;
+  margin-left: 15%;
   margin-top: 4%;
 }
 
 .dining {
-  width: 15%;
+  width: 13%;
   background: url("images/Bar&foodresize.jpg");
   border-radius: 50%;
   border: 5px white solid;
@@ -99,7 +100,7 @@ div.circles {
 }
 
 .bday {
-  width: 15%;
+  width: 13%;
   background: url("images/bdayresize.jpg");
   border-radius: 50%;
   border: 5px white solid;
@@ -114,10 +115,15 @@ div.circles {
   justify-items: baseline;
   /* margin-top: 100px; */
   padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .title h2 {
   float: right;
+}
+
+.title h1 {
+  motion-rotation: reverse;
 }
 
 .title h1,
@@ -126,14 +132,29 @@ div.circles {
   color: #0073e6;
   font-size: 50px;
   text-shadow: 2px 2px #05002e;
+  font-family: "Permanent Marker", cursive;
 }
 
-.contact,
+.info {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #05002e;
+  color: white;
+}
+
+#contact,
 .about,
 .faq {
   display: grid;
   align-items: center;
   justify-content: center;
+}
+
+.about h3 {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-left: 44%;
 }
 
 /*.circles {
