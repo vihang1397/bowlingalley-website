@@ -26,10 +26,11 @@ nav {
 }
 
 .nav-links li a {
-  color: white;
+  color: rgb(79, 214, 191);
   text-decoration: none;
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0px 10px;
 }
 
 header {
@@ -113,7 +114,6 @@ div.circles {
   text-shadow: 2px 2px #05002e;
   text-align: center;
   justify-items: baseline;
-  /* margin-top: 100px; */
   padding-top: 100px;
   padding-bottom: 20px;
 }
@@ -139,7 +139,8 @@ div.circles {
   margin-top: 20px;
   margin-bottom: 50px;
   background-color: #05002e;
-  color: white;
+  color: rgb(79, 214, 191);
+  font-size: 1.5rem;
 }
 
 #contact,
@@ -156,34 +157,6 @@ div.circles {
   justify-items: center;
   margin-left: 46%;
 }
-
-/*.circles {
-  display: grid;
-  grid-column: 1 / 4;
-  grid-row: 4 / 5;
-}*/
-
-/* will put this back in after-----
-section.bowling {
-  height: 100vh;
-  background: url("#") no-repeat;
-  background-size: 1356px 768px;
-}
-section.contact {
-  height: 100vh;
-  background: url("#") no-repeat;
-  background-size: 1356px 768px;
-}
-section.bar-food {
-  height: 100vh;
-  background: url("#") no-repeat;
-  background-size: 1356px 768px;
-}
-section.parties {
-  height: 100vh;
-  background: url("#") no-repeat;
-  background-size: 1356px 768px;
-}*/
 
 @media screen and (max-width: 768px) {
   .line {
@@ -202,6 +175,17 @@ section.parties {
     z-index: 2;
   }
 
+  .nav-links.open {
+    clip-path: circle(1600px at 90% -20%);
+    -webkit-clip-path: circle(1600px at 90% -20%);
+    pointer-events: all;
+  }
+
+  .nav-links li a {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+
   .nav-links {
     position: fixed;
     background: #05002e;
@@ -214,22 +198,57 @@ section.parties {
     pointer-events: none;
   }
 
-  .nav-links.open {
-    clip-path: circle(1600px at 90% -20%);
-    -webkit-clip-path: circle(1600px at 90% -20%);
-    pointer-events: all;
+  .nav-links.open img#logo {
+    position: relative;
+    top: 10%;
   }
 
-  .nav-links li a {
-    font-size: 25px;
+  .nav-links img#logo {
+    position: relative;
+    top: 10%;
   }
 
-  /* Working on making backgrounds better in responsive mode
-  section.bar-food {
-    height: auto;
-    width: auto;
-    background: url("images/Bar&food.jpg") no-repeat;
-    background-size: 1024px 768px;
-    background-position: 40%;
+  div.circles {
+    display: table-column;
+  }
+  /* 
+  .bowling1,
+  .dining,
+  .bday {
+    border-radius: 0%;
+    width: 100%;
+  }
+  */
+  .bowling1 h2,
+  .dining h2,
+  .bday h2 {
+    display: table-cell;
+    text-align: center;
+    background: blueviolet;
+    padding: 100px;
+    text-align: center;
+    width: max-content;
+  }
+
+  .bowling1 {
+    background: none;
+    border: none;
+  }
+  /*
+  .bowling1 h2 {
+    width: 100%;
+    margin: auto;
+    background: none;
+    background-color: black;
+    padding-left: 300px;
+    padding-right: 300px;
   } */
+
+  .info {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: #05002e;
+    color: rgb(79, 214, 191);
+    font-size: 1.9rem;
+  }
 }
