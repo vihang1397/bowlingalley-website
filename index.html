@@ -11,87 +11,65 @@
     <title>TVL - Where Bowling meets FUN!</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+    <div class="hero">
+      <div class="nav-bar">
+        <div class="nav-logo">
+          <img src="images/logo1.png" alt="TVL Logo" />
         </div>
-
-        <ul class="nav-links">
-          <li>
-            <a href="index.html"
-              ><img
-                src="images/logo1.png"
-                alt="TrentValley Lanes Logo"
-                id="logo"
-                height="88px"
-            /></a>
-          </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bowling.html">Bowling</a></li>
-          <li><a href="parties.html">Parties</a></li>
-          <li><a href="bar&food.html">Bar/Food</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- <img src="images/logo.png" alt="TrentValley Lanes Logo" id="logo" /> -->
+        <div class="nav-links" id="nav-links">
+          <i class="fa fa-times" onclick="closeMenu()"></i>
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Bar/Food</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </div>
+      <div class="banner-title">
+        <h1>
+          TrentValley Lanes <br />
+          Where <span>bowling</span> meets <span>FUN</span>
+        </h1>
+        <button type="button" class="btn">Explore</button>
+      </div>
+      <div class="vertical-bar">
+        <div class="social-icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-pinterest"></i>
+        </div>
+      </div>
+    </div>
+    <!-- <header>
+      <img src="images/logo1.png" alt="TVL Logo " />
     </header>
 
-    <section class="landing">
-      <div class="title">
-        <h1>Trent Valley Lanes</h1>
-        <h2>Where Bowling Meets Fun!</h2>
-      </div>
-      <div class="circles">
-        <div class="bowling1">
-          <h2>Bowling</h2>
-        </div>
-        <div class="dining">
-          <h2>Food & Beverage</h2>
-        </div>
-        <div class="bday">
-          <h2>Birthday Parties</h2>
-        </div>
-      </div>
-      <div class="info">
-        <div id="contact">
-          <h3>Contact Info</h3>
-          <br />
-          <p>Trent Valley Lanes</p>
-          <p>Email</p>
-          <p>Ph #</p>
-          <p>Addy</p>
-        </div>
-        <div class="about">
-          <h3>All About Us</h3>
-          <br />
-          <p>
-            Trent Valley Lanes has been around since 19''. We aquired it back in
-            201' and is our family run business. We have bowling fun with DJ
-            Earl as well as a bar and eatery. We also have nightly leagues and
-            are a part of YBC. Come and join us for some fun!
-          </p>
-        </div>
-        <div class="faq">
-          <h3>FAQ's</h3>
-        </div>
-      </div>
-    </section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bar&food.html">Bar/Food</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>Landing page and spalsh screen</section>
+
+    <aside>Maybe here is where I'll put in the circles</aside>
+
     <footer>
-      Copyright © 2020 Vihang Idnani &
+      Copyright © 2020
+      <a href="https://github.com/vihang1397">Vihang Idnani</a> &
       <a href="https://www.vostersmedia.ca" class="copyright">Vosters Media</a>
-    </footer>
+    </footer> -->
     <script src="app.js"></script>
   </body>
 </html>
