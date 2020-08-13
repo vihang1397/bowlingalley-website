@@ -1,134 +1,237 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: lightblue; */
 }
-
-nav {
-  height: 10vh;
-  background: #05002e;
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
 }
-
-.nav-links {
+.nav-bar {
   display: flex;
+  padding: 30px 120px;
+}
+.nav-logo img {
+  width: 250px;
+}
+.nav-links {
+  flex: 1;
+}
+.nav-links ul {
+  margin-left: 50px;
+  display: inline;
+  float: right;
+}
+.nav-links ul li {
   list-style: none;
-  width: 50%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: auto;
+  display: inline-block;
+  padding: 8px 25px;
 }
-
-.nav-links li a {
+.nav-links ul a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  font-family: sans-serif;
+  font-size: 18px;
 }
-
-header {
-  position: fixed;
-  top: 0;
+.nav-links ul li::after {
+  content: " ";
+  width: 0;
+  height: 2px;
+  background: rgb(62, 168, 255);
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+.nav-links ul li:hover::after {
   width: 100%;
 }
-
-header nav ul img#logo {
-  float: left;
-  position: fixed;
-  top: 0%;
-  left: 0%;
+.banner-title {
+  margin: 80px 130px;
+  color: #fff;
+}
+.banner-title h1 {
+  font-size: 64px;
+  margin-bottom: 30px;
+}
+.banner-title h1 span {
+  color: rgb(62, 168, 255);
+}
+.nav-bar .fa {
+  display: none;
+}
+.about,
+.faq {
+  display: none;
 }
 
-footer {
-  background: #05002e;
-  /* position: fixed;
-  bottom: 0%; */
-  width: 100%;
+.spotlight {
+  flex: 1;
+  /* border: 2px solid purple; */
+  margin-top: 180px;
+}
+.spotlight ul {
+  display: inline;
+  /* border: 2px dashed red; */
+}
+.spotlight ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 25px;
+  border: 4px solid white;
+  border-radius: 50%;
+  margin-left: 10%;
+  height: 230px;
+  width: 200px;
+  justify-items: center;
   text-align: center;
-  height: 40px;
-  padding: 10px;
-  color: white;
 }
-
-.copyright {
+#league {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url(images/league.jpg); */
+  /* The above mentioned comment is also the way the control the gradient or to darken the image */
+  background: url(images/league.jpg);
+}
+#dining {
+  background: url(images/dining.jpg);
+}
+#package {
+  background: url(images/package.jpg);
+}
+.spotlight ul li h2 {
+  padding-top: 150px;
+}
+.spotlight ul a {
+  color: whitesmoke;
   text-decoration: none;
+  font-size: 18px;
+}
+.spotlight ul li::after {
+  content: " ";
+  width: 0;
+  height: 2px;
+  background: rgb(62, 168, 255);
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+.spotlight ul li:hover::after {
+  width: 50%;
+}
+.contact {
+  text-align: center;
   color: white;
+  font-size: 1.2em;
+  padding: 20px 45px;
+}
+footer {
+  background-color: rgba(62, 168, 255, 0.8);
+  height: 35px;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
 }
 
-.copyright:hover {
-  text-decoration: underline;
-}
-
-section.landing {
-  height: 100vh;
-  background: url("images/landing.jpg") no-repeat;
-  background-size: 1356px 768px;
-}
-section.about {
-  height: 100vh;
-  background: url("images/about.jpg") no-repeat;
-  background-size: 1356px 768px;
-}
-section.contact {
-  height: 100vh;
-  background: url("images/contact.jpg") no-repeat;
-  background-size: 1356px 768px;
-}
-section.bar-food {
-  height: 100vh;
-  background: url("images/Bar&food.jpg") no-repeat;
-  background-size: 1356px 768px;
-}
-
-@media screen and (max-width: 768px) {
-  .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px;
+@media screen and (max-width: 700px) {
+  .banner-title {
+    margin: 80px 40px;
   }
-
-  nav {
-    position: relative;
+  .banner-title h1 {
+    font-size: 45px;
   }
-
-  .hamburger {
+  .nav-bar {
+    padding: 10px 30px;
+  }
+  .fa-bars {
     position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .nav-bar .fa {
+    display: block;
+    color: #fff;
+    margin: 20px 25px 0px 25px;
+    font-size: 22px;
     cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
   }
-
+  .nav-logo img {
+    width: 230px;
+  }
   .nav-links {
-    position: fixed;
-    background: #05002e;
     height: 100vh;
+    width: 200px;
+    background: #000;
+    top: 0;
+    right: -200px;
+    position: absolute;
+    text-align: left;
+    z-index: 2;
+    transition: 0.5s;
+  }
+  .nav-links ul {
+    float: none;
+  }
+  .nav-links ul a {
+    display: block;
+  }
+  .spotlight {
+    flex: 1;
+    /* border: 2px solid purple; */
+    margin-top: 180px;
+  }
+  .spotlight ul {
+    display: inline;
+    /* border: 2px dashed red; */
+    align-items: center;
+  }
+  .spotlight ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 0px;
+    border: 1px solid white;
+    border-radius: 0%;
+    margin-left: 0;
+    height: 200px;
+    width: 100vw;
+    text-align: center;
+  }
+  .spotlight ul li h2 {
+    padding-top: 80px;
+  }
+  #league {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+      url(images/league-responsive.jpg);
+    background-position: center;
+    /*  The above mentioned comment is also the way the control the gradient or to darken the image */
+  }
+  #dining {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+      url(images/dining-responsive.jpg);
+    background-position: center;
+  }
+  #package {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+      url(images/package-responsive.jpg);
+    background-position: center;
+  }
+  .nav-links ul li::after,
+  .spotlight ul li::after {
+    content: " ";
+    width: 0;
+    height: 4px;
+    background: rgb(62, 168, 255);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+  }
+  .nav-links ul li:hover::after {
     width: 100%;
-    flex-direction: column;
-    clip-path: circle(80px at 90% -10%);
-    -webkit-clip-path: circle(80px at 90% -10%);
-    transition: all 0.6s ease;
-    pointer-events: none;
   }
-
-  .nav-links.open {
-    clip-path: circle(1600px at 90% -20%);
-    -webkit-clip-path: circle(1600px at 90% -20%);
-    pointer-events: all;
+  .spotlight ul li:hover::after {
+    width: 20%;
   }
-
-  .nav-links li a {
-    font-size: 25px;
-  }
-
-  /* Working on making backgrounds better in responsive mode
-  section.bar-food {
-    height: auto;
-    width: auto;
-    background: url("images/Bar&food.jpg") no-repeat;
-    background-size: 1024px 768px;
-    background-position: 40%;
-  } */
 }
