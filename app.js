@@ -1,7 +1,7 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const links = document.querySelector(".nav-links li");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
+var show = document.getElementById("nav-links");
+function showMenu() {
+  show.style.right = "0";
+}
+function closeMenu() {
+  show.style.right = "-200px";
+}
