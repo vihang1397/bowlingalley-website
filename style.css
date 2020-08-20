@@ -6,18 +6,18 @@
   box-sizing: border-box;
   /* background-color: lightblue; */
 }
-li {
- list-style: none;
-}
+/* li {
+ list-style: none; /*Why is this needed?
+} */
 body {
   /* when 3 circles flex-wrap's, 
   we have to push down the body more */
-  min-height: 100vh;
+  min-height: 100vh; /* Is this really necessary? What purpose is it solving? Need to check it. */
   display: flex;
   flex-direction: column;
 }
 main.info {
-  margin-top: 32rem; /* wrap two circles */
+  margin-top: 32rem; /* wrap two circles */ /* 32rem?? Why so much? */
 }
 @media (min-width: 525px) {
   /* wrap one circle */
@@ -30,44 +30,49 @@ main.info {
   main.info {
     margin-top: 0;
   }
+  
+  /*There has to be a better way to make the circles move rather than putting media queries every 100px */
+  
 }
 .spacer {
   flex-grow: 1;
 }
 .hero {
-  height: calc(70vh + 127px);
-  overflow: visible;
+  height: calc(70vh + 127px); /*Needs to be reworked. height: 100vh; . Can't have image only until half */
+  overflow: visible; /* Originally "overflow-x: hidden;" */
   position: relative;
 }
 .background-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url(images/hero.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: cover; /* Look into this */
   height: 70vh;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: -1; /* Figure out this '.background-image' crap that is unnecessary */
 }
 .nav-bar {
   display: flex;
-  padding: 20px;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  padding: 30px 120px;
+  /*   padding: 20px;
+  background-color: hsla(0, 0%, 0%, 0.3);  No Idea why tho. Test. */
 }
 .nav-logo img {
   width: 250px;
 }
 .nav-links {
-  display: flex;
-  align-items: center;
+  flex: 1;
+  /*   display: flex;
+  align-items: center; */
 }
 .nav-links ul {
   margin-left: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: inline;
+/*   flex-wrap: wrap;  Maybe works with "display: flex;" */
+  float: right;
 }
 .nav-links ul li {
   list-style: none;
@@ -94,6 +99,7 @@ main.info {
 .banner-title {
   color: #fff;
   padding: 2em;
+/*   margin: 80px 130px;  Originally */  
 }
 @media (min-width: 770px) {
   .banner-title {
@@ -104,9 +110,10 @@ main.info {
   font-size: 64px;
   transform: skew(7deg, -6deg);
   text-align: center;
+/*   margin-bottom: 30px; */
 }
 .banner-title h1 span {
-  color: #3e48cd;
+  color: #3e48cd; /* Originally color: rgb(62, 168, 255); */
 }
 .nav-bar .fa {
   display: none;
@@ -115,7 +122,6 @@ main.info {
 .faq {
   display: none;
 }
-
 .spotlight {
   /*border: 2px solid purple;*/
   position: absolute;
@@ -123,6 +129,11 @@ main.info {
   left: 0;
   right: 0;
   height: 254px;
+/*   .spotlight {
+  flex: 1;
+  border: 2px solid purple;
+  margin-top: 180px;
+} */
 }
 .spotlight ul {
   display: inline;
@@ -130,40 +141,42 @@ main.info {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-
   /* border: 2px dashed red; */
 }
 .spotlight h2{
-    color: #eb1c22;
+    color: #eb1c22; /* Needs an overhaul and maybe can be accomplished in ".spotlight ul a" or ".spotlight ul li h2" below */
 }
 /* add space between circles (when they don't wrap) */
 @media (min-width: 815px) {
   .spotlight ul a:not(:first-child) li {
     margin-left: 1em;
   }
-}
+/* .spotlight ul {
+  display: inline; Originally */
+  /* border: 2px dashed red; */
 .spotlight ul li {
   list-style: none;
   display: inline-block;
+/*   padding: 8px 25px; */
   border: 4px solid white;
   border-radius: 50%;
-  height: 254px;
-  width: 254px;
+  height: 254px; /* Originally 230px */
+  width: 254px; /* Originally 200px */
   justify-items: center;
   text-align: center;
-  background-size: cover;
+  background-size: cover; /* Why? */
 }
 #league {
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url(images/league.jpg); */
   /* The above mentioned comment is also the way the control the gradient or to darken the image */
-  background-image: url(images/bowling.jpg);
+  background: url(images/bowling.jpg); /* Originally league.jpg */
 }
 #dining {
-  background-image: url(images/pic9.jpg);
+  background: url(images/pic9.jpg); /* Originally dining.jpg */
 }
 #package {
-  background-image: url(images/pic6.jpg);
+  background: url(images/pic6.jpg); /* Originally package.jpg */
 }
 .spotlight ul li h2 {
   padding-top: 150px;
@@ -187,7 +200,8 @@ main.info {
 }
 .contact {
   text-align: center;
-  color: black;
+/*   color: black; In case the bg doesn't go all the way down */
+  color: purple; /* Originally white */
   font-size: 1.2em;
   padding: 20px 45px;
 }
@@ -196,12 +210,16 @@ footer {
   height: 35px;
   text-align: center;
   color: white;
+  /*   padding-top: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 @media screen and (max-width: 700px) {
+/*   .banner-title {
+    margin: 80px 40px;
+  } */
   .banner-title h1 {
     font-size: 45px;
   }
@@ -244,7 +262,27 @@ footer {
     flex: 1;
     /* border: 2px solid purple; */
   }
-
+/*     margin-top: 180px;
+  }
+  .spotlight ul {
+    display: inline;
+    /* border: 2px dashed red; */
+    align-items: center;
+  }
+  .spotlight ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 0px;
+    border: 1px solid white;
+    border-radius: 0%;
+    margin-left: 0;
+    height: 200px;
+    width: 100vw;
+    text-align: center;
+  }
+  .spotlight ul li h2 {
+    padding-top: 80px;
+  } */
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
       url(images/league-responsive.jpg);
