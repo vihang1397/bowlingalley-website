@@ -295,3 +295,54 @@ footer {
     width: 20%;
   }
 }
+#pullout {
+  position: fixed;
+  top: 10px;
+  right: -230px;
+  width: 266px;
+  height: 280px;
+  background: #f5f5f5;
+  transition: all 0.5s ease;
+}
+
+#pullout.active {
+  right: 0;
+}
+
+#pullout-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 230px;
+  height: 280px;
+}
+
+#pullout-form {
+  width: 230px;
+  height: 280px;
+}
+
+#pullout-tab {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: white;
+  padding-left: 9px;
+  padding-top: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 280px;
+  background: #3700ff;
+  cursor: pointer;
+}
+
+/* Covid-19 info page */
+.covid19 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(images/covid19.jpg) no-repeat;
+  /* background-image: url(images/covid19.jpg); */
+  height: 100vh;
+  color: white;
+}
