@@ -7,7 +7,7 @@
   /* background-color: lightblue; */
 }
 li {
- list-style: none;
+  list-style: none;
 }
 body {
   /* when 3 circles flex-wrap's, 
@@ -51,13 +51,21 @@ main.info {
   right: 0;
   z-index: -1;
 }
+.public-bowling {
+  background-color: pink;
+}
 .nav-bar {
   display: flex;
   padding: 20px;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  /* background-color: hsla(0, 0%, 0%, 0.3); */
 }
 .nav-logo img {
   width: 250px;
+  padding-left: 60px;
+  padding-top: 10px;
+}
+#sandy-logo {
+  width: 190px;
 }
 .nav-links {
   display: flex;
@@ -83,7 +91,7 @@ main.info {
   content: " ";
   width: 0;
   height: 2px;
-  background: rgb(62, 168, 255);
+  background: rgb(62, 72, 205);
   display: block;
   margin: auto;
   transition: 0.3s;
@@ -100,8 +108,13 @@ main.info {
     padding: 3em;
   }
 }
-.banner-title h1 {
+.banner-title h1{
   font-size: 64px;
+  transform: skew(7deg, -6deg);
+  text-align: center;
+}
+.banner-title h3{
+  font-size: 35px;
   transform: skew(7deg, -6deg);
   text-align: center;
 }
@@ -113,7 +126,9 @@ main.info {
 }
 .about,
 .faq {
-  display: none;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0% 10%;
 }
 
 .spotlight {
@@ -133,8 +148,9 @@ main.info {
 
   /* border: 2px dashed red; */
 }
-.spotlight h2{
-    color: #eb1c22;
+.spotlight h2 {
+  color: #003355;
+  text-shadow: -1px 2px rgb(214, 214, 214);
 }
 /* add space between circles (when they don't wrap) */
 @media (min-width: 815px) {
@@ -160,10 +176,16 @@ main.info {
   background-image: url(images/bowling.jpg);
 }
 #dining {
-  background-image: url(images/pic9.jpg);
+  background-image: url(images/dining2.jpg);
 }
 #package {
   background-image: url(images/pic6.jpg);
+}
+#league:hover,
+#dining:hover,
+#package:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
 }
 .spotlight ul li h2 {
   padding-top: 150px;
@@ -177,7 +199,7 @@ main.info {
   content: " ";
   width: 0;
   height: 2px;
-  background: rgb(62, 168, 255);
+  background: rgb(62, 72, 205);
   display: block;
   margin: auto;
   transition: 0.3s;
@@ -185,14 +207,14 @@ main.info {
 .spotlight ul li:hover::after {
   width: 50%;
 }
-.contact {
+.contact, .bowling, .parties{
   text-align: center;
   color: black;
   font-size: 1.2em;
   padding: 20px 45px;
 }
 footer {
-  background-color: rgba(62, 168, 255, 0.8);
+  background-color: rgba(62, 72, 205, 0.8); /* Originally 62, 168, 255 */
   height: 35px;
   text-align: center;
   color: white;
@@ -223,12 +245,15 @@ footer {
   .nav-logo img {
     width: 230px;
   }
+  #sandy-logo {
+    width: 190px;
+  }
   .nav-links {
     height: 100vh;
-    width: 200px;
+    width: 275px;
     background: #000;
     top: 0;
-    right: -200px;
+    right: -275px;
     position: absolute;
     text-align: left;
     z-index: 2;
@@ -247,18 +272,18 @@ footer {
 
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/league-responsive.jpg);
+      url(images/bowling.jpg);
     background-position: center;
     /*  The above mentioned comment is also the way the control the gradient or to darken the image */
   }
   #dining {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/dining-responsive.jpg);
+      url(images/dining2.jpg);
     background-position: center;
   }
   #package {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/package-responsive.jpg);
+      url(images/pic6.jpg);
     background-position: center;
   }
   .nav-links ul li::after,
@@ -266,7 +291,7 @@ footer {
     content: " ";
     width: 0;
     height: 4px;
-    background: rgb(62, 168, 255);
+    background: rgb(62, 72, 205);
     display: block;
     margin: auto;
     transition: 0.3s;
@@ -277,4 +302,58 @@ footer {
   .spotlight ul li:hover::after {
     width: 20%;
   }
+}
+#pullout {
+  position: fixed;
+  top: 10px;
+  right: -230px;
+  width: 266px;
+  height: 280px;
+  background: #f5f5f5;
+  transition: all 0.5s ease;
+}
+
+#pullout.active {
+  right: 0;
+}
+
+#pullout-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 230px;
+  height: 280px;
+}
+
+#pullout-form {
+  width: 230px;
+  height: 280px;
+}
+
+#pullout-tab {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: white;
+  padding-left: 9px;
+  padding-top: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 280px;
+  background: #3700ff;
+  cursor: pointer;
+}
+
+/* Covid-19 info page */
+.covid19 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(images/covid19.jpg) no-repeat;
+  /* background-image: url(images/covid19.jpg); */
+  height: 100vh;
+  color: white;
+}
+.covid19 li{
+  list-style: disc;
 }
