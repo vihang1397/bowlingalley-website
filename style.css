@@ -35,7 +35,8 @@ main.info {
   flex-grow: 1;
 }
 .hero {
-  height: calc(70vh + 127px);
+  /* height: calc(70vh + 127px); --- Poorly thought-out calculation with no regard to what happens on pages with less content */
+  height: 100vh; /* The correct way to maintain footer at the bottom, always */
   overflow: visible;
   position: relative;
 }
@@ -44,7 +45,19 @@ main.info {
     url(images/hero.jpg);
   background-position: center;
   background-size: cover;
-  height: 70vh;
+  height: 75vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.background-image1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -122,6 +135,35 @@ main.info {
 .banner-title h1 span {
   color: #3e48cd;
 }
+.beach-title {
+  color: #fff;
+  padding: 2em;
+}
+.beach-title h3 a {
+  color: #3e48cd;
+  text-shadow: -1px 1px white;
+}
+@media (min-width: 770px) {
+  .beach-title {
+    padding: 3em;
+  }
+}
+.beach-title h1 {
+  font-size: 64px;
+  transform: skew(7deg, -6deg);
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  text-shadow: 1px 1px salmon;
+}
+.beach-title h3 {
+  font-size: 35px;
+  transform: skew(7deg, -6deg);
+  text-align: center;
+}
+.beach-title h1 span {
+  color: #fd17e4;
+  font-family: "Great Vibes", cursive;
+}
 .nav-bar .fa {
   display: none;
 }
@@ -135,7 +177,7 @@ main.info {
 .spotlight {
   /*border: 2px solid purple;*/
   position: absolute;
-  top: calc(70vh - 127px); /* minus half the height */
+  top: calc(75vh - 127px); /* minus half the height */
   left: 0;
   right: 0;
   height: 254px;
@@ -171,16 +213,20 @@ main.info {
   background-size: cover;
 }
 #league {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    url(images/league.jpg); */
-  /* The above mentioned comment is also the way the control the gradient or to darken the image */
-  background-image: url(images/bowling.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(images/bowling.jpg);
+  /* background-position: center; */
+  /*  The above mentioned comment is also the way the control the gradient or to darken the image */
 }
 #dining {
-  background-image: url(images/dining2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(images/dining2.jpg);
+  background-position: center;
 }
 #package {
-  background-image: url(images/pic6.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(images/pic6.jpg);
+  background-position: center;
 }
 #league:hover,
 #dining:hover,
@@ -224,10 +270,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: absolute;
+  bottom: 0;
+  width: 100vw; */
 }
 
 @media screen and (max-width: 700px) {
   .banner-title h1 {
+    font-size: 45px;
+  }
+  .beach-title h1 {
     font-size: 45px;
   }
   .nav-bar {
@@ -274,18 +326,18 @@ footer {
   }
 
   #league {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
       url(images/bowling.jpg);
-    background-position: center;
+    /* background-position: center; */
     /*  The above mentioned comment is also the way the control the gradient or to darken the image */
   }
   #dining {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
       url(images/dining2.jpg);
     background-position: center;
   }
   #package {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
       url(images/pic6.jpg);
     background-position: center;
   }
@@ -303,12 +355,12 @@ footer {
     width: 100%;
   }
   .spotlight ul li:hover::after {
-    width: 20%;
+    width: 50%;
   }
 }
 #pullout {
   position: fixed;
-  top: 10px;
+  top: 120px;
   right: -230px;
   width: 266px;
   height: 280px;
@@ -331,6 +383,8 @@ footer {
 #pullout-form {
   width: 230px;
   height: 280px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(images/covid19.jpg) no-repeat;
 }
 
 #pullout-tab {
@@ -351,14 +405,26 @@ footer {
 
 /* Covid-19 info page */
 .covid19 {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(images/covid19.jpg) no-repeat;
-  /* background-image: url(images/covid19.jpg); */
-  height: 100vh;
   color: white;
   padding: 20px;
-  width: 200px;
+  width: 213px;
+  text-align: center;
 }
 .covid19 h4 ul li {
-  list-style-type: disc;
+  list-style-type: none;
+  color: rgb(207, 207, 207);
+  text-align: left;
+}
+.covid19 h4 ul li::before {
+  content: "\1F637";
+  margin-left: -15px;
+  margin-right: 10px;
+}
+.covid19 h4 ul {
+  margin-top: 20px;
+}
+.covid19 h2 {
+  text-decoration: underline;
+  text-shadow: 2px 2px salmon;
+  margin-bottom: 20px;
 }
