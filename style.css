@@ -65,7 +65,8 @@ main.info {
   padding-top: 10px;
 }
 #sandy-logo {
-  width: 190px;
+  width: 220px;
+  margin-top: -30px;
 }
 .nav-links {
   display: flex;
@@ -108,12 +109,12 @@ main.info {
     padding: 3em;
   }
 }
-.banner-title h1{
+.banner-title h1 {
   font-size: 64px;
   transform: skew(7deg, -6deg);
   text-align: center;
 }
-.banner-title h3{
+.banner-title h3 {
   font-size: 35px;
   transform: skew(7deg, -6deg);
   text-align: center;
@@ -207,7 +208,9 @@ main.info {
 .spotlight ul li:hover::after {
   width: 50%;
 }
-.contact, .bowling, .parties{
+.contact,
+.bowling,
+.parties {
   text-align: center;
   color: black;
   font-size: 1.2em;
@@ -353,7 +356,9 @@ footer {
   /* background-image: url(images/covid19.jpg); */
   height: 100vh;
   color: white;
+  padding: 20px;
+  width: 200px;
 }
-.covid19 li{
-  list-style: disc;
+.covid19 h4 ul li {
+  list-style-type: disc;
 }
