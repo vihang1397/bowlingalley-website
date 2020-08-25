@@ -282,6 +282,9 @@ footer {
   .beach-title h1 {
     font-size: 45px;
   }
+  .beach-title h3 a {
+    font-size: 25px;
+  }
   .nav-bar {
     padding: 10px 30px;
   }
