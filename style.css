@@ -51,6 +51,9 @@ main.info {
   right: 0;
   z-index: -1;
 }
+.public-bowling {
+  background-color: pink;
+}
 .nav-bar {
   display: flex;
   padding: 20px;
@@ -105,8 +108,13 @@ main.info {
     padding: 3em;
   }
 }
-.banner-title h1 {
+.banner-title h1{
   font-size: 64px;
+  transform: skew(7deg, -6deg);
+  text-align: center;
+}
+.banner-title h3{
+  font-size: 35px;
   transform: skew(7deg, -6deg);
   text-align: center;
 }
@@ -168,7 +176,7 @@ main.info {
   background-image: url(images/bowling.jpg);
 }
 #dining {
-  background-image: url(images/pic9.jpg);
+  background-image: url(images/dining2.jpg);
 }
 #package {
   background-image: url(images/pic6.jpg);
@@ -199,7 +207,7 @@ main.info {
 .spotlight ul li:hover::after {
   width: 50%;
 }
-.contact {
+.contact, .bowling, .parties{
   text-align: center;
   color: black;
   font-size: 1.2em;
@@ -264,18 +272,18 @@ footer {
 
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/league-responsive.jpg);
+      url(images/bowling.jpg);
     background-position: center;
     /*  The above mentioned comment is also the way the control the gradient or to darken the image */
   }
   #dining {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/dining-responsive.jpg);
+      url(images/dining2.jpg);
     background-position: center;
   }
   #package {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-      url(images/package-responsive.jpg);
+      url(images/pic6.jpg);
     background-position: center;
   }
   .nav-links ul li::after,
@@ -345,4 +353,7 @@ footer {
   /* background-image: url(images/covid19.jpg); */
   height: 100vh;
   color: white;
+}
+.covid19 li{
+  list-style: disc;
 }
