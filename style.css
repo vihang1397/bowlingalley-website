@@ -471,14 +471,18 @@ footer {
   .banner-title h1 {
     font-size: 45px;
   }
-  .beach-title h1 {
-    font-size: 45px;
+  .banner-title h3 {
+    padding: 0px 10px 0px 0px;
   }
   .banner-title h3 a {
     font-size: 25px;
   }
   .beach-title h1 {
     font-size: 45px;
+    padding: 0px 16px;
+  }
+  .beach-title h3{
+    padding: 0px 10px 0px 0px;
   }
   .beach-title h3 a {
     font-size: 25px;
