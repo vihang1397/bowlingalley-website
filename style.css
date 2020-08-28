@@ -173,7 +173,6 @@ main.info {
 }
 
 .hero {
-  /* height: calc(70vh + 127px); -- not good way to do */
   height: 100vh; /* The correct way to maintain footer at the bottom, always */
   overflow: visible;
   position: relative;
@@ -277,7 +276,6 @@ main.info {
   color: #fff;
   padding: 10px;
 }
-
 .banner-title h1 {
   font-size: 64px;
   transform: skew(7deg, -6deg);
@@ -406,7 +404,6 @@ main.info {
 .spotlight ul li:hover::after {
   width: 50%;
 }
-
 footer {
   background-color: rgba(62, 72, 205, 0.8); /* Originally 62, 168, 255 */
   height: 35px;
@@ -415,9 +412,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  bottom: 0;
-  width: 100vw; */
 }
 
 @media screen and (max-width: 700px) {
@@ -470,7 +464,6 @@ footer {
   }
   .spotlight {
     flex: 1;
-    /* border: 2px solid purple; */
   }
 
   #league {
