@@ -503,7 +503,14 @@ footer {
     position: fixed;
     top: 10px;
     right: 20px;
-    text-shadow: 4px 4px black;
+    /* following to delete if no-go */
+    text-shadow: 2px 3px black;
+    background-color: rgb(103, 190, 169);
+    display: block;
+    border-radius: 25%;
+    height: 26px;
+    width: 26px;
+    /* until here */
   }
   .nav-bar .fa {
     display: block;
