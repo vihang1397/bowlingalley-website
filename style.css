@@ -543,6 +543,16 @@ footer {
   background: #eb1c22;
   cursor: pointer;
 }
+@media  screen and (max-width: 700px) {
+  #pullout {
+    position: fixed;
+    top: 12%;
+    right: 45px;
+  }
+  #pullout.active {
+    right: 275px;
+  }
+}
 
 /* Covid-19 info page */
 .covid19 {
