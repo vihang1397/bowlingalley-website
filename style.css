@@ -59,6 +59,26 @@ main.info {
     color: transparent;
 }
 
+@media  screen and (max-width: 700px) {
+  .info {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 30% 20%;
+}
+  .about {
+    grid-row: 1;
+    grid-column: 1 / 5;
+  }
+  .hours {
+    grid-row: 2;
+    grid-column: 1 / 5;
+  }
+  .contact {
+    grid-row: 3;
+    grid-column: 1 / 5;
+  }
+}
+
 .about {
     grid-row: 1;
     grid-column: 1 / 5;
@@ -78,7 +98,7 @@ main.info {
 .bowling {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 45% 14% 38% 3%;
+  grid-template-rows: 50% 13% 34% 3%;
   text-align: center;
   color: black;
   font-size: 1.2em;
@@ -88,12 +108,15 @@ main.info {
   padding: 10px;
 }
 
-
 .freeBowl {
   grid-row: 3;
   grid-column: 1 / 6;
   background-color:#7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
+}
+
+.freeBowl ul {
+  padding: 5px 0px 5px 0px;
 }
 
 .public-bowling {
@@ -103,6 +126,10 @@ main.info {
   background-image: linear-gradient(to right bottom, #98dfea, #ffffff, #98dfea);
   border-radius: 75px 75px;
   margin-bottom: 10px;
+}
+
+.public-bowling h2 {
+  padding: 20px 10px 10px 10px;
 }
 
 .youth {
@@ -123,19 +150,48 @@ main.info {
 }
 
 .league-hours h2 {
-  padding: 40px 10px 10px 10px;
+  padding: 30px 10px 10px 10px;
 }
 
 .footer {
   grid-row: 4;
   grid-column: 1 / 6;
-  background-color: rgba(62, 72, 205, 0.8);
+  background-color: #3e48cd;
   height: 35px;
   text-align: center;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media  screen and (max-width: 700px) {
+  .bowling {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  .freeBowl {
+    grid-row: 4;
+    grid-column: 1 / 3;
+  }
+  .public-bowling {
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+  .youth {
+    grid-row: 3;
+    grid-column: 1 / 3;
+  }
+  .league-hours {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    padding-top: 0;
+  }
+  .footer {
+    grid-row: 5;
+    grid-column: 1 / 3;
+  }
 }
 
 .parties {
@@ -172,12 +228,19 @@ main.info {
   color: #eb1c22;
 }
 
+@media  screen and (max-width: 700px) {
+  .parties {
+    margin: 0px;
+  }
+}
+
 .hero {
   /* height: calc(70vh + 127px); -- not good way to do */
   height: 100vh; /* The correct way to maintain footer at the bottom, always */
   overflow: visible;
   position: relative;
 }
+
 .background-image-main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
     url(images/hero.jpg);
@@ -282,6 +345,7 @@ main.info {
   font-size: 64px;
   transform: skew(7deg, -6deg);
   text-align: center;
+  padding-top: 50px;
 }
 .banner-title h3 {
   font-size: 35px;
@@ -293,7 +357,7 @@ main.info {
 }
 .beach-title {
   color: #fff;
-  padding: 10px;
+  padding: 75px 10px 10px 10px;
 }
 .beach-title h3 a, 
 .banner-title h3 a {
@@ -408,7 +472,7 @@ main.info {
 }
 
 footer {
-  background-color: rgba(62, 72, 205, 0.8); /* Originally 62, 168, 255 */
+  background-color: #3e48cd; /* Originally 62, 168, 255 */
   height: 35px;
   text-align: center;
   color: white;
@@ -576,3 +640,14 @@ footer {
   text-shadow: 2px 2px salmon;
   margin-bottom: 20px;
 }
+@media  screen and (max-width: 700px) {
+  #pullout {
+    position: fixed;
+    top: 12%;
+    right: 45px;
+  }
+  #pullout.active {
+    right: 275px;
+  }
+}
+
