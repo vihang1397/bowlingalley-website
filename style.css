@@ -62,7 +62,7 @@ main.info {
 
 /* Temp commented following to isolate problem */
 
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 768px) {
   .info {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -157,7 +157,7 @@ main.info {
 }
 
 /* Grid management done by Adria */
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 768px) {
   .bowling {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -187,11 +187,11 @@ main.info {
   text-align: center;
   color: black;
   font-weight: bolder;
-  font-size: 1.2em;
+  font-size: 1.6em;
   background-color: #7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
-  margin: 0% 33% 3% 33%;
+  margin: 5% 20% 3% 20%;
 }
 
 .parties h1 {
@@ -217,11 +217,19 @@ main.info {
   color: #eb1c22;
 }
 
-@media  screen and (max-width: 700px) {
+@media  screen and (max-width: 767px) {
   .parties {
-    margin: 0px;
+    margin: 15px 15px 0px 15px;
+    padding: 10px;
+    font-size: 1em;
   }
-}
+  .parties h1 {
+    font-size: 28px;
+  }
+  .parties h2 {
+    font-size: 20px;
+  }
+} 
 
 .hero {
   height: 100vh; /* The correct way to maintain footer at the bottom, always */
@@ -467,15 +475,16 @@ footer {
   align-items: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .banner-title h1 {
     font-size: 45px;
   }
   .banner-title h3 {
-    padding: 0px 10px 0px 0px;
+    padding: 20px 10px 0px 0px;
+    font-size: 30px;
   }
   .banner-title h3 a {
-    font-size: 25px;
+    font-size: 22px;
   }
   .beach-title h1 {
     font-size: 45px;
@@ -491,9 +500,10 @@ footer {
     padding: 10px 30px;
   }
   .fa-bars {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
+    text-shadow: 4px 4px black;
   }
   .nav-bar .fa {
     display: block;
