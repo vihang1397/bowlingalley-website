@@ -116,7 +116,6 @@ main.info {
   text-align: center;
   color: black;
   font-size: 1.0em;
-
 }
 
 .public-bowling {
@@ -135,6 +134,7 @@ main.info {
 
 .public-bowling li {
   line-height: 1.7em;
+
 }
 
 .league-hours {
@@ -190,7 +190,6 @@ main.info {
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
 
 }
-
 .freeBowl ul {
   padding: 5px 0px 5px 0px;
 }
@@ -231,6 +230,7 @@ main.info {
   border-radius: 75px 75px;
   /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
   margin: 2% 25% 0% 25%;
+
 }
 
 .parties h1 {
