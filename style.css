@@ -230,7 +230,7 @@ main.info {
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
   /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
-  margin: 0% 25% 0% 25%;
+  margin: 2% 25% 0% 25%;
 }
 
 .parties h1 {
@@ -245,19 +245,18 @@ main.info {
   font-size: 24px;
 }
 
-.pkg2 p {
-  padding-bottom: 15px;
-}
-
 .pkg1 h2,
 .pkg2 h2 {
   color: #3e48cd;
-  padding-top: 10px;
 }
 
 .pkg1 p,
 .pkg2 p {
   color: #eb1c22;
+}
+
+.pkg2 h4 {
+  font-style: italic;
 }
 
 @media  screen and (max-width: 767px) {
