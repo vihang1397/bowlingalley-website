@@ -42,10 +42,21 @@ main.info {
   grid-template-rows: 40% 60%;
 }
 
+.info h3 {
+  padding-bottom: 15px;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bolder;
+}
+
 .contact {
     grid-column: 3 / 5;
     background-color: #eb1c22;
     background-image: linear-gradient(to right bottom, #be6e46, #fff, #be6e46);
+}
+
+.contact ul {
+  line-height: 1.5em;
 }
 
 .hours {
@@ -105,7 +116,6 @@ main.info {
   text-align: center;
   color: black;
   font-size: 1.0em;
-
 }
 
 .public-bowling {
@@ -119,7 +129,12 @@ main.info {
 }
 
 .public-bowling h2 {
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 0px 10px;
+}
+
+.public-bowling li {
+  line-height: 1.7em;
+
 }
 
 .league-hours {
@@ -134,7 +149,15 @@ main.info {
 }
 
 .league-hours h2 {
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 0px 10px;
+}
+
+.league-hours h5 {
+  padding-bottom: 10px;
+}
+
+.public-bowling h5 {
+  padding-bottom: 10px;
 }
 
 .youth {
@@ -145,6 +168,19 @@ main.info {
   margin: auto;
   padding: 10px;
 }
+.youth h2{
+  padding-top:10px;
+}
+.youth h4 {
+  text-align: left;
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+
+.youth p {
+  text-align: left;
+  padding-left: 25px;
+}
 
 .freeBowl {
   width: 97%;
@@ -154,7 +190,6 @@ main.info {
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
 
 }
-
 .freeBowl ul {
   padding: 5px 0px 5px 0px;
 }
@@ -194,7 +229,8 @@ main.info {
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
   /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
-  margin: 0% 25% 0% 25%;
+  margin: 2% 25% 0% 25%;
+
 }
 
 .parties h1 {
@@ -212,12 +248,15 @@ main.info {
 .pkg1 h2,
 .pkg2 h2 {
   color: #3e48cd;
-  padding-top: 10px;
 }
 
 .pkg1 p,
 .pkg2 p {
   color: #eb1c22;
+}
+
+.pkg2 h4 {
+  font-style: italic;
 }
 
 @media  screen and (max-width: 767px) {
@@ -318,11 +357,17 @@ main.info {
   list-style: none;
   display: inline-block;
   padding: 8px 25px;
+  text-shadow: -1px 2px #37392e;
 }
 .nav-links ul a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
+}
+@media  screen and (max-width: 767px) {
+  .nav-links ul a {
+    font-size: 18px;
+  }
 }
 .nav-links ul li::after {
   content: " ";
@@ -345,6 +390,7 @@ main.info {
   transform: skew(7deg, -6deg);
   text-align: center;
   padding-top: 50px;
+  text-shadow: -1px 3px #37392e;
 }
 .banner-title h3 {
   font-size: 35px;
