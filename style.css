@@ -64,10 +64,10 @@
 .nav-bar .fa {
   display: none;
 }
-.about,
+/* .about,
 .faq {
   display: none;
-}
+} */
 
 .spotlight {
   flex: 1;
