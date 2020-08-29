@@ -318,7 +318,7 @@ main.info {
 }
 .background-image-dining {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
-    url(images/patio.jpg);
+    url(images/patio1.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -419,7 +419,7 @@ main.info {
 }
 .beach-title h3 {
   font-size: 35px;
-  transform: skew(7deg, -6deg);
+  transform: skew(8deg, -5deg);
   text-align: center;
 }
 .beach-title h1 span {
