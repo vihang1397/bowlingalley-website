@@ -228,8 +228,7 @@ main.info {
   background-color: #7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
-  /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
-  margin: 2% 25% 0% 25%;
+  margin: 0% 25% 0% 25%;
 
 }
 
@@ -238,7 +237,7 @@ main.info {
     -webkit-background-clip: text;
     color: transparent;
     font-size: 32px;
-    padding: 15px 20px 0px 20px;
+    padding: 5px 20px 0px 20px;
 }
 
 .parties h2 {
@@ -569,7 +568,7 @@ p#subject {
     right: 20px;
     /* following to delete if no-go */
     text-shadow: 2px 3px black;
-    background-color: rgb(103, 190, 169);
+    background-color: #3e48cd;
     display: block;
     border-radius: 25%;
     height: 26px;
