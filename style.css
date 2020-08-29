@@ -605,6 +605,7 @@ p#subject {
   }
   .nav-links ul a {
     display: block;
+    /* position: fixed; */
   }
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
@@ -723,7 +724,7 @@ p#subject {
     top: 0;
     left: 0;
     width: 36px;
-    height: 150px;
+    height: 170px;
     background: #eb1c22;
     cursor: pointer;
     border-top-left-radius: 25%;
