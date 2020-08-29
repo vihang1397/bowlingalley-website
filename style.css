@@ -45,14 +45,14 @@ main.info {
 .contact {
     grid-column: 3 / 5;
     background-color: #eb1c22;
-    background-image: linear-gradient(to right bottom, #EFD9CE, #ffffff, #EFD9CE, #EFD9CE, #ffffff, #EFD9CE);
+    background-image: linear-gradient(to right bottom, #be6e46, #fff, #be6e46);
 }
 
 .hours {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
     background-color: #eb1c22;
-    background-image: linear-gradient(to right bottom, #EFD9CE, #ffffff, #EFD9CE, #EFD9CE, #ffffff, #EFD9CE);
+    background-image: linear-gradient(to right bottom, #be6e46, #fff, #be6e46);
 }
 .cosmic {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
@@ -86,7 +86,7 @@ main.info {
     grid-row: 1;
     grid-column: 1 / 5;
     background-color: #3e48cd;
-    background-image: linear-gradient(to right bottom, #98dfea, #ffffff, #98dfea);
+    background-image: linear-gradient(to right bottom, #9fc2cc, #fff, #9fc2cc);
 }
 
 .contact,
@@ -104,7 +104,8 @@ main.info {
   flex-wrap: wrap;
   text-align: center;
   color: black;
-  /* font-size: 1.2em; */
+  font-size: 1.0em;
+
 }
 
 .public-bowling {
@@ -125,7 +126,7 @@ main.info {
   width: 40%;
   padding: 10px;
   background-color: #98dfea;
-  background-image: linear-gradient(to right bottom, #98dfea, #ffffff, #98dfea);
+  background-image: linear-gradient(to right bottom, #9fc2cc, #ffffff, #9fc2cc);
   border-radius: 75px 75px;
   margin-bottom: 10px;
   margin-right: 5%;
@@ -138,7 +139,7 @@ main.info {
 
 .youth {
   background-color: #07beb8;
-  background-image: linear-gradient(to right bottom, #07beb8, #ffffff, #07beb8);
+  background-image: linear-gradient(to right bottom, #be6e46, #ffffff, #be6e46);
   border-radius: 50px 50px 0px 0px;
   width: 97%;
   margin: auto;
@@ -151,8 +152,8 @@ main.info {
   padding: 15px;
   background-color:#7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
-}
 
+}
 
 .freeBowl ul {
   padding: 5px 0px 5px 0px;
@@ -192,7 +193,8 @@ main.info {
   background-color: #7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
-  margin: 5% 20% 3% 20%;
+  /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
+  margin: 0% 25% 0% 25%;
 }
 
 .parties h1 {
@@ -350,7 +352,7 @@ main.info {
   text-align: center;
 }
 .banner-title h1 span {
-  color: #3e48cd;
+  color: #ffd400;
 }
 .beach-title {
   color: #fff;
@@ -405,8 +407,8 @@ main.info {
   /* border: 2px dashed red; */
 }
 .spotlight h2 {
-  color: #003355;
-  text-shadow: -1px 2px rgb(214, 214, 214);
+  color: #ffd400;
+  text-shadow: -1px 2px #37392e;
 }
 /* add space between circles (when they don't wrap) */
 @media (min-width: 815px) {
@@ -547,7 +549,6 @@ footer {
   .nav-links ul a {
     display: block;
   }
-  
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
       url(images/bowling.jpg);
