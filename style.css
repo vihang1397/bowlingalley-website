@@ -228,7 +228,6 @@ main.info {
   background-color: #7b85c2;
   background-image: linear-gradient(to right bottom, #b9bedf, #7b85c2, #b9bedf, #b9bedf, #7b85c2, #b9bedf);
   border-radius: 75px 75px;
-  /* margin: 5% 20% 3% 20%; left only for ref, delete after going live */
   margin: 0% 25% 0% 25%;
 
 }
@@ -605,6 +604,7 @@ p#subject {
   }
   .nav-links ul a {
     display: block;
+    /* position: fixed; */
   }
   #league {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
